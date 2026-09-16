@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="styles.css">
+
+<div class="content">
+    <h1>Tasks</h1>
+    <h2>Task View</h2>
+    <form id="taskView">
+        <table width="100%">
+            <tr>
+                <th>Name</th>
+                <th>Due Date</th>
+                <th>Priority Level</th>
+                <th>Consultant</th>
+                <th>Done</th>
+            </tr>
+            <tr>
+                <td>Sample Task</td>
+                <td>Sample Date</td>
+                <td>Level 1</td>
+                <td>Person</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+    </form>
+    <h2>New Task</h2>
+    <form id="newTaskForm" onsubmit="return SubmitTask()">
+        <label id="newTaskLabName">Name</label>
+        <label id="newTaskLabDueDate">Due Date</label>
+        <label id="newTaskLabPriority">Priority</label>
+        <label id="newTaskLabConsultant">Consultant</label>
+        <label id="newTaskLabNotes">Notes</label>
+        <input type="text" id="newTaskInName" required>
+        <input type="date" id="newTaskInDueDate" required>
+        <select id="newTaskInPriority" required>
+            <option value="">Choose</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <select id="newTaskInConsultant" required>
+            <option value="choose">Choose</option>
+        </select>
+        <textarea id="newTaskInNotes"></textarea>
+        <input type="submit" id="newTaskSubmit">
+    </form>
+    
+</div>
+<script src="form_task.js"></script>

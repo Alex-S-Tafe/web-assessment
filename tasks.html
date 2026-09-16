@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<header>
+    <div class="logo">
+        <img src="images/GE_Logo-inline-on-white.png" alt="Gelos Logo" width="50%">
+    </div>
+    <div class="navbar">
+        <nav>
+            <a href="index.html">Home</a>
+            <a id="current" href="tasks.html">Tasks</a>
+            <a href="contact.html">Contact</a>
+            <a href="">Page 2</a>
+            <a href="template.html">Page Template</a>
+        </nav>
+    </div>
+    </div>
+</header>
+<body>
+    <div class="content">
+        <h1>Tasks</h1>
+        <h2>Task View</h2>
+        <input id="searchbox">
+        <button onclick="DisplayBinSearchResult()">Binary search</button>
+        <button onclick="DisplaySequSearchResults()">Sequ. search</button>
+        <button onclick="ClearResults()">Clear Results</button>
+        <br>
+        <label id="searchResult"></label>
+        <form id="taskView">
+            <table width="100%">
+                <tr>
+                    <th>Name</th>
+                    <th>Due Date</th>
+                    <th>Priority Level</th>
+                    <th>Consultant</th>
+                    <th>Done</th>
+                </tr>
+                <tr>
+                    <td>Sample Task</td>
+                    <td>Sample Date</td>
+                    <td>Level 1</td>
+                    <td>Person</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+            </table>
+        </form>
+        <button onclick="DeleteCompleted()">Delete Completed Tasks</button>
+        <button onclick="AddDummyTasks(3)">Test w/ nonsense data</button>
+        <br>
+        <button onclick="SortByName()">Sort by name</button>
+        <button onclick="SortByConsultant()">Sort by consultant</button>
+        <h2>New Task</h2>
+        <form id="newTaskForm" onsubmit="return SubmitTask()">
+            <label id="newTaskLabName">Name</label>
+            <label id="newTaskLabDueDate">Due Date</label>
+            <label id="newTaskLabPriority">Priority</label>
+            <label id="newTaskLabConsultant">Consultant</label>
+            <label id="newTaskLabNotes">Notes</label>
+            <input type="text" id="newTaskInName" required>
+            <input type="date" id="newTaskInDueDate" required>
+            <select id="newTaskInPriority" required>
+                <option value="">Choose</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <select id="newTaskInConsultant" required>
+                <option value="choose">Choose</option>
+            </select>
+            <textarea id="newTaskInNotes"></textarea>
+            <input type="submit" id="newTaskSubmit">
+            <label id="newTaskLabDone">Done</label>
+            <input type="checkbox" id="newTaskInDone">
+        </form>
+        
+    </div>
+    <script src="form_task.js"></script>
+</body>
+<footer>
+    <div class="footnote">
+        <h3>Footnote header</h3>
+        <p>Footnotes and links here</p>
+        <p>&copy; Gelos Enterprises - 2026</p>
+        <br>
+    </div>
+</footer>
+</html>
