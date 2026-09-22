@@ -122,6 +122,9 @@ form {
     background-color: green;
 }
 
+#taskView th {
+    text-align: left;
+}
 
 #newTask table tr th {
     display: flex;
