@@ -242,7 +242,7 @@ function LoadTasks(){
     }
     taskDisplay += `</table>`;
     document.getElementById("taskView").innerHTML = taskDisplay;
-    document.getElementById("sreachbox").focus();
+    document.getElementById("searchbox").focus();
     AttachCheckboxListeners();
 }
 
@@ -354,16 +354,16 @@ function DisplayBinSearchResult(){
         `<div class="searchResult">
         <p>${target} found.<br>
         ${result.isDone? "<del>":""}<br>
-        Task Name: ${result.name}<br>
-        ${result.isDone? "</del>":""}
-        ${InsertDeleteButton(result.name)}<br>
+        Task Name: ${result.name}
+        ${result.isDone? "</del>":""}<br>
         Due Date: ${result.dueDate}<br>
         Priority: ${result.priority}<br>
         Consultant: ${result.consultant}<br>
         Done: ${result.isDone}<br>
-        Notes: ${result.notes}</p>
+        Notes: ${result.notes}<br>
+        ${InsertDeleteButton(result.name)}</p>
         </div>`;
-    document.getElementById("sreachbox").focus();
+    document.getElementById("searchbox").focus();
 
     //console.log("found")
 }
@@ -416,18 +416,18 @@ function DisplaySequSearchResults(){
             <p>Result ${i + 1}<br>
             ${results[i].isDone? "<del>":""}
             Name: ${results[i].name}
-            ${results[i].isDone? "</del>":""}
-            ${InsertDeleteButton(results[i].name)}<br>
+            ${results[i].isDone? "</del>":""}<br>
             Due Date: ${results[i].dueDate}<br>
             Priority: ${results[i].priority}<br>
             Consultant: ${results[i].consultant}<br>
             Done: ${results[i].isDone}<br>
-            Notes: ${results[i].notes}</p>
+            Notes: ${results[i].notes}<br>
+            ${InsertDeleteButton(results[i].name)}</p>
             </div>`;
         }
     }
     document.getElementById("searchResult").innerHTML = textDisplay;
-    document.getElementById("sreachbox").focus();
+    document.getElementById("searchbox").focus();
 
 }
 
