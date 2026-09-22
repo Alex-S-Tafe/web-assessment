@@ -57,7 +57,7 @@ taskList.push(new Task(
     "1",
     "Bob",
     "On complete, toggle off",
-    false
+    true
 ));
 
 taskList.push(new Task(
@@ -75,7 +75,7 @@ taskList.push(new Task(
     "1",
     "Bob",
     "",
-    false
+    true
 ));
 
 taskList.push(new Task(
@@ -102,7 +102,7 @@ taskList.push(new Task(
     "1",
     "Bob",
     "",
-    false
+    true
 ));
 
 /**
@@ -242,6 +242,7 @@ function LoadTasks(){
     }
     taskDisplay += `</table>`;
     document.getElementById("taskView").innerHTML = taskDisplay;
+    document.getElementById("sreachbox").focus();
     AttachCheckboxListeners();
 }
 
@@ -349,17 +350,21 @@ function DisplayBinSearchResult(){
         //console.log("not found");
         return;
     }
-    document.getElementById("searchResult").innerHTML = `<div class="searchResult">${target} found.<br>
-        ${result.isDone? "<del>":""}
-        Task Name: ${result.name}
+    document.getElementById("searchResult").innerHTML = 
+        `<div class="searchResult">
+        <p>${target} found.<br>
+        ${result.isDone? "<del>":""}<br>
+        Task Name: ${result.name}<br>
         ${result.isDone? "</del>":""}
         ${InsertDeleteButton(result.name)}<br>
         Due Date: ${result.dueDate}<br>
         Priority: ${result.priority}<br>
         Consultant: ${result.consultant}<br>
         Done: ${result.isDone}<br>
-        Notes: ${result.notes}
+        Notes: ${result.notes}</p>
         </div>`;
+    document.getElementById("sreachbox").focus();
+
     //console.log("found")
 }
 
@@ -405,10 +410,10 @@ function DisplaySequSearchResults(){
     if (results == null) {
         textDisplay = `<div class="searchResult">No results found for ${target}</div>`;
     } else {
-        textDisplay += `<div class="searchResult">Found: ${results.length}</div>`
+        textDisplay += `<div class="searchResult"><p>Found: ${results.length}</p></div>`
         for (let i = 0; i < results.length; i++){
             textDisplay += `<div class="searchResult">
-            Result ${i + 1}<br>
+            <p>Result ${i + 1}<br>
             ${results[i].isDone? "<del>":""}
             Name: ${results[i].name}
             ${results[i].isDone? "</del>":""}
@@ -417,11 +422,13 @@ function DisplaySequSearchResults(){
             Priority: ${results[i].priority}<br>
             Consultant: ${results[i].consultant}<br>
             Done: ${results[i].isDone}<br>
-            Notes: ${results[i].notes}<br>
+            Notes: ${results[i].notes}</p>
             </div>`;
         }
     }
     document.getElementById("searchResult").innerHTML = textDisplay;
+    document.getElementById("sreachbox").focus();
+
 }
 
 

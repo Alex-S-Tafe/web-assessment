@@ -17,6 +17,10 @@
             <a href="contact.html">Contact</a>
             <a href="">Page 2</a>
             <a href="template.html">Page Template</a>
+            <button id="theme-toggler" type="button" onclick="DarkTheme()">
+                <img id="sunIcon" src="images/sunny_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg">
+                <img id="moonIcon" src="images/bedtime_24dp_$FFFFFF_FILL0_wght400_GRAD0_opsz24.svg">
+            </button>
         </nav>
     </div>
     </div>
@@ -56,7 +60,7 @@
         <button onclick="SortByConsultant()">Sort by consultant</button>
         <h2>New Task</h2>
         <form id="newTaskForm" onsubmit="return SubmitTask()">
-            <label id="newTaskLabName">Name</label>
+            <label id="newTaskLabName"><span>Name</span></label>
             <label id="newTaskLabDueDate">Due Date</label>
             <label id="newTaskLabPriority">Priority</label>
             <label id="newTaskLabConsultant">Consultant</label>
@@ -89,4 +93,5 @@
         <br>
     </div>
 </footer>
+<script src="darkTheme.js"></script>
 </html>

@@ -82,6 +82,19 @@ header {
 
 }
 
+body {
+    background-color: #DDDDDD;
+}
+
+form {
+    border-style: ridge;
+    border-color: #a08463;
+    border-width: 5px;
+    border-radius: 10px;
+    background-color: #dca95e;
+}
+
+
 
 .footnote {
     background-color: #a08463;
@@ -98,11 +111,7 @@ header {
 }
 
 
-/* Old task display */
-#taskView table {
-    border-style:double;
-    border-color:#077A99;
-}
+
 
 #taskView table tr:hover {
     background-color: aqua;
@@ -113,9 +122,6 @@ header {
     background-color: green;
 }
 
-#newTask table {
-    border-style:groove;
-}
 
 #newTask table tr th {
     display: flex;
@@ -127,9 +133,6 @@ header {
 
 /* New Task display */
 #newTaskForm {
-    border-style: double;
-    border-radius: 10px;
-    border-width: 2px;
     padding: 10px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -200,9 +203,6 @@ header {
 
 /* Contact form display */
 #contactForm {
-    border-style: solid;
-    border-radius: 10px;
-    border-width: 2px;
     padding: 10px;
     display:grid;
     grid-template-columns: repeat(6, 1fr);
@@ -265,4 +265,128 @@ header {
     margin: 5px;
     padding: 5px;
     border-radius: 5px;
+    background-color: #dca95e;
 }
+
+.dark-theme {
+    background-color: #000;
+}
+
+.dark-theme header {
+    background-color: #000;
+}
+
+.dark-theme p {
+    color: #CCCCCC;
+}
+
+.dark-theme nav {
+    background-color: #222222;
+}
+
+.dark-theme .footnote {
+    background-color: #222222;
+}
+
+.dark-theme h1 {
+    color: #FFFFFF
+}
+
+.dark-theme h2 {
+    color: #EEEEEE;
+}
+
+.dark-theme h3 {
+    color: #DDDDDD;
+}
+
+.dark-theme #current {
+    background-color: #444444;
+    color: #FFF
+}
+
+#theme-toggler {
+    border-radius: 10px;
+    border: none;
+    margin: 4px;
+}
+
+.dark-theme #theme-toggler {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+#moonIcon {
+    filter:invert();
+    display: none;
+}
+
+.dark-theme #moonIcon {
+    display: inline;
+}
+
+.dark-theme #sunIcon {
+    display: none;
+}
+
+.dark-theme th {
+    color: #FFFFFF;
+}
+
+.dark-theme tr:hover th {
+    color: #000000;
+}
+
+.dark-theme td {
+    color: #FFFFFF;
+}
+
+.dark-theme tr:hover td{
+    color: #000000;
+}
+
+
+
+
+.dark-theme label {
+    color: #FFFFFF;
+}
+
+.dark-theme input {
+    background-color: #111111;
+    color: #FFFFFF;
+}
+
+.dark-theme select {
+    background-color: #111111;
+    color: #FFFFFF;
+}
+
+.dark-theme textarea {
+    background-color: #111111;
+    color: #FFFFFF;
+}
+
+.dark-theme button {
+    color: #FFFFFF;
+    background-color: #333333;
+}
+
+.dark-theme #newTaskSubmit {
+    color: #FF8888;
+}
+
+.dark-theme .searchResult {
+    background-color: #111111;
+}
+
+.dark-theme .searchResult p{
+    color: #FFFFFF;
+    /*display: none;/* test if this block is activating, it is */
+}
+
+.dark-theme form {
+    border-color: #a08463;
+    background-color: #222222;
+}
+
